@@ -1,0 +1,12 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+kr.co.linkhub.autoconfigure.TaxinvoiceServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.CashbillServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.StatementServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.HTTaxinvoiceServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.HTCashbillServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.CloseDownServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.EasyFinBankServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.AccountCheckServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.MessageServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.KakaoServiceAutoConfiguration, \
+kr.co.linkhub.autoconfigure.FaxServiceAutoConfiguration
