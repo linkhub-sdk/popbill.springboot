@@ -1,4 +1,4 @@
-package kr.co.linkhub.autoconfigure;
+package com.popbill.springboot.autoconfigure;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,9 +12,8 @@ import org.springframework.context.annotation.Lazy;
 
 import com.popbill.api.StatementService;
 import com.popbill.api.statement.StatementServiceImp;
-
-import kr.co.linkhub.autoconfigure.properties.PopbillServiceProperties;
-import kr.co.linkhub.autoconfigure.properties.StatementServiceProperties;
+import com.popbill.springboot.autoconfigure.properties.PopbillServiceProperties;
+import com.popbill.springboot.autoconfigure.properties.StatementServiceProperties;
 
 @Configuration
 @ConditionalOnClass(StatementService.class)

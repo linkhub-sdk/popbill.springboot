@@ -1,9 +1,9 @@
-package kr.co.linkhub.autoconfigure.properties;
+package com.popbill.springboot.autoconfigure.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "popbill.cashbill-service")
-public class CashbillServiceProperties {
+@ConfigurationProperties(prefix = "popbill.message-service")
+public class MessageServiceProperties {
     private String LinkID = null;
     private String SecretKey = null;
     private Boolean isTest = null;

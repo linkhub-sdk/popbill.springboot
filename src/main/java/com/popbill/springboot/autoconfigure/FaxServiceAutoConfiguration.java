@@ -1,4 +1,4 @@
-package kr.co.linkhub.autoconfigure;
+package com.popbill.springboot.autoconfigure;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,9 +12,8 @@ import org.springframework.context.annotation.Lazy;
 
 import com.popbill.api.FaxService;
 import com.popbill.api.fax.FaxServiceImp;
-
-import kr.co.linkhub.autoconfigure.properties.FaxServiceProperties;
-import kr.co.linkhub.autoconfigure.properties.PopbillServiceProperties;
+import com.popbill.springboot.autoconfigure.properties.FaxServiceProperties;
+import com.popbill.springboot.autoconfigure.properties.PopbillServiceProperties;
 
 @Configuration
 @ConditionalOnClass(FaxService.class)

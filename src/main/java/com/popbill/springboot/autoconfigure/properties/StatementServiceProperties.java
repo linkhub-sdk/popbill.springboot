@@ -1,9 +1,9 @@
-package kr.co.linkhub.autoconfigure.properties;
+package com.popbill.springboot.autoconfigure.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "popbill.fax-service")
-public class FaxServiceProperties {
+@ConfigurationProperties(prefix = "popbill.statement-service")
+public class StatementServiceProperties {
     private String LinkID = null;
     private String SecretKey = null;
     private Boolean isTest = null;

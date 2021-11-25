@@ -1,9 +1,9 @@
-package kr.co.linkhub.autoconfigure.properties;
+package com.popbill.springboot.autoconfigure.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "popbill.httaxinvoice-service")
-public class HTTaxinvoiceServiceProperties {
+@ConfigurationProperties(prefix = "popbill.kakao-service")
+public class KakaoServiceProperties {
     private String LinkID = null;
     private String SecretKey = null;
     private Boolean isTest = null;

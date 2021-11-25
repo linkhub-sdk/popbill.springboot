@@ -1,9 +1,9 @@
-package kr.co.linkhub.autoconfigure.properties;
+package com.popbill.springboot.autoconfigure.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "popbill.message-service")
-public class MessageServiceProperties {
+@ConfigurationProperties(prefix = "popbill.taxinvoice-service")
+public class TaxinvoiceServiceProperties {
     private String LinkID = null;
     private String SecretKey = null;
     private Boolean isTest = null;

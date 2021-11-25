@@ -1,4 +1,4 @@
-package kr.co.linkhub.autoconfigure;
+package com.popbill.springboot.autoconfigure;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,9 +12,8 @@ import org.springframework.context.annotation.Lazy;
 
 import com.popbill.api.CloseDownService;
 import com.popbill.api.closedown.CloseDownServiceImp;
-
-import kr.co.linkhub.autoconfigure.properties.CloseDownServiceProperties;
-import kr.co.linkhub.autoconfigure.properties.PopbillServiceProperties;
+import com.popbill.springboot.autoconfigure.properties.CloseDownServiceProperties;
+import com.popbill.springboot.autoconfigure.properties.PopbillServiceProperties;
 
 @Configuration
 @ConditionalOnClass(CloseDownService.class)

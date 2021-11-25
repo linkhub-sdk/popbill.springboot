@@ -1,9 +1,9 @@
-package kr.co.linkhub.autoconfigure.properties;
+package com.popbill.springboot.autoconfigure.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "popbill.kakao-service")
-public class KakaoServiceProperties {
+@ConfigurationProperties(prefix = "popbill.htcashbill-service")
+public class HTCashbillServiceProperties {
     private String LinkID = null;
     private String SecretKey = null;
     private Boolean isTest = null;

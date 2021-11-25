@@ -1,9 +1,9 @@
-package kr.co.linkhub.autoconfigure.properties;
+package com.popbill.springboot.autoconfigure.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "popbill.accountcheck-service")
-public class AccountCheckServiceProperties {
+@ConfigurationProperties(prefix = "popbill.closedown-service")
+public class CloseDownServiceProperties {
     private String LinkID = null;
     private String SecretKey = null;
     private Boolean isTest = null;
