@@ -8,7 +8,7 @@ popbill.springboot.sdk.java
 Gladle
 ================
     dependencies {
-        implementalion group: 'kr.co.linkhub', name: 'popbill-spring-boot-stater', version: '0.0.1'
+        implementalion group: 'kr.co.linkhub', name: 'popbill-spring-boot-stater', version: '1.0.0'
     }
     
 ------------
@@ -17,7 +17,7 @@ Maven
     <dependency>
         <groupId>kr.co.linkhub</groupId>
         <artifactId>popbill-spring-boot-starter</artifactId>
-        <version>0.0.1</version>
+        <version>1.0.0</version>
     </dependency>
 
 ------------
