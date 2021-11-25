@@ -40,12 +40,12 @@ public class CloseDownServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : closeDownServiceProperties.getLinkId());
         closeDownServiceImp .setSecretKey(closeDownServiceProperties.getSecretKey() == null || closeDownServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : closeDownServiceProperties.getSecretKey());
-        closeDownServiceImp.setTest(closeDownServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : closeDownServiceProperties.isTest());
+        closeDownServiceImp.setTest(closeDownServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : closeDownServiceProperties.getIsTest());
         closeDownServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         closeDownServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         closeDownServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        closeDownServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        closeDownServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         closeDownServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         closeDownServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         closeDownServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

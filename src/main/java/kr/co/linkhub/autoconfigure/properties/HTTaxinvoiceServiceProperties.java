@@ -22,10 +22,10 @@ public class HTTaxinvoiceServiceProperties {
         this.SecretKey = secretKey;
     }
 
-    public Boolean isTest() {
+    public Boolean getIsTest() {
         return this.isTest;
     }
-    public void setTest(Boolean isTest) {
+    public void setIsTest(Boolean isTest) {
         this.isTest = isTest;
     }
 }

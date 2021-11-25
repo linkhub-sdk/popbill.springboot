@@ -40,12 +40,12 @@ public class TaxinvoiceServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : taxinvoiceServiceProperties.getLinkId());
         taxinvoiceServiceImp .setSecretKey(taxinvoiceServiceProperties.getSecretKey() == null || taxinvoiceServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : taxinvoiceServiceProperties.getSecretKey());
-        taxinvoiceServiceImp.setTest(taxinvoiceServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : taxinvoiceServiceProperties.isTest());
+        taxinvoiceServiceImp.setTest(taxinvoiceServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : taxinvoiceServiceProperties.getIsTest());
         taxinvoiceServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         taxinvoiceServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         taxinvoiceServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        taxinvoiceServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        taxinvoiceServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         taxinvoiceServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         taxinvoiceServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         taxinvoiceServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

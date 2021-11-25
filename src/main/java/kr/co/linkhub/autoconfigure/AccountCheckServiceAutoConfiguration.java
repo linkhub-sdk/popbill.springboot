@@ -40,12 +40,12 @@ public class AccountCheckServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : accountCheckServiceProperties.getLinkId());
         accountCheckServiceImp .setSecretKey(accountCheckServiceProperties.getSecretKey() == null || accountCheckServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : accountCheckServiceProperties.getSecretKey());
-        accountCheckServiceImp.setTest(accountCheckServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : accountCheckServiceProperties.isTest());
+        accountCheckServiceImp.setTest(accountCheckServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : accountCheckServiceProperties.getIsTest());
         accountCheckServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         accountCheckServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         accountCheckServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        accountCheckServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        accountCheckServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         accountCheckServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         accountCheckServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         accountCheckServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

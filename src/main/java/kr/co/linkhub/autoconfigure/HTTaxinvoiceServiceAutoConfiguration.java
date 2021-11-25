@@ -40,12 +40,12 @@ public class HTTaxinvoiceServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : htTaxinvoiceServiceProperties.getLinkId());
         htTaxinvoiceServiceImp .setSecretKey(htTaxinvoiceServiceProperties.getSecretKey() == null || htTaxinvoiceServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : htTaxinvoiceServiceProperties.getSecretKey());
-        htTaxinvoiceServiceImp.setTest(htTaxinvoiceServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : htTaxinvoiceServiceProperties.isTest());
+        htTaxinvoiceServiceImp.setTest(htTaxinvoiceServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : htTaxinvoiceServiceProperties.getIsTest());
         htTaxinvoiceServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         htTaxinvoiceServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         htTaxinvoiceServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        htTaxinvoiceServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        htTaxinvoiceServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         htTaxinvoiceServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         htTaxinvoiceServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         htTaxinvoiceServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

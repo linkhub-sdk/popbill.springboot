@@ -40,12 +40,12 @@ public class MessageServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : messageServiceProperties.getLinkId());
         messageServiceImp .setSecretKey(messageServiceProperties.getSecretKey() == null || messageServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : messageServiceProperties.getSecretKey());
-        messageServiceImp.setTest(messageServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : messageServiceProperties.isTest());
+        messageServiceImp.setTest(messageServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : messageServiceProperties.getIsTest());
         messageServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         messageServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         messageServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        messageServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        messageServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         messageServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         messageServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         messageServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

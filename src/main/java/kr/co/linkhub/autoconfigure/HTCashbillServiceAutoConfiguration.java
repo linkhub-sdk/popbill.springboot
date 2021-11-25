@@ -40,12 +40,12 @@ public class HTCashbillServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : htCashbillServiceProperties.getLinkId());
         htCashbillServiceImp .setSecretKey(htCashbillServiceProperties.getSecretKey() == null || htCashbillServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : htCashbillServiceProperties.getSecretKey());
-        htCashbillServiceImp.setTest(htCashbillServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : htCashbillServiceProperties.isTest());
+        htCashbillServiceImp.setTest(htCashbillServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : htCashbillServiceProperties.getIsTest());
         htCashbillServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         htCashbillServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         htCashbillServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        htCashbillServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        htCashbillServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         htCashbillServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         htCashbillServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         htCashbillServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

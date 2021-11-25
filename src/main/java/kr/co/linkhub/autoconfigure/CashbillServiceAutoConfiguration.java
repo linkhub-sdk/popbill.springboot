@@ -40,12 +40,12 @@ public class CashbillServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : cashbillServiceProperties.getLinkId());
         cashbillServiceImp .setSecretKey(cashbillServiceProperties.getSecretKey() == null || cashbillServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : cashbillServiceProperties.getSecretKey());
-        cashbillServiceImp.setTest(cashbillServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : cashbillServiceProperties.isTest());
+        cashbillServiceImp.setTest(cashbillServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : cashbillServiceProperties.getIsTest());
         cashbillServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         cashbillServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         cashbillServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        cashbillServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        cashbillServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         cashbillServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         cashbillServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         cashbillServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

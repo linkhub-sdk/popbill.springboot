@@ -33,10 +33,10 @@ public class PopbillServiceProperties {
         this.SecretKey = secretKey;
     }
 
-    public Boolean isTest() {
+    public Boolean getIsTest() {
         return this.isTest;
     }
-    public void setTest(Boolean isTest) {
+    public void setIsTest(Boolean isTest) {
         this.isTest = isTest;
     }
 
@@ -61,10 +61,10 @@ public class PopbillServiceProperties {
         this.useLocalTimeYN = useLocalTimeYN;
     }
 
-    public Boolean isIpRestrictOnOff() {
+    public Boolean getIsIpRestrictOnOff() {
         return isIPRestrictOnOff;
     }
-    public void setIpRestrictOnOff(Boolean isIPRestrictOnOff) {
+    public void setIsIpRestrictOnOff(Boolean isIPRestrictOnOff) {
         this.isIPRestrictOnOff = isIPRestrictOnOff;
     }
 

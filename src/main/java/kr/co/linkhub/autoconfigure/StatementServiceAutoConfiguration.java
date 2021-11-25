@@ -40,12 +40,12 @@ public class StatementServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : statementServiceProperties.getLinkId());
         statementServiceImp .setSecretKey(statementServiceProperties.getSecretKey() == null || statementServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : statementServiceProperties.getSecretKey());
-        statementServiceImp.setTest(statementServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : statementServiceProperties.isTest());
+        statementServiceImp.setTest(statementServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : statementServiceProperties.getIsTest());
         statementServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         statementServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         statementServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        statementServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        statementServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         statementServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         statementServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         statementServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

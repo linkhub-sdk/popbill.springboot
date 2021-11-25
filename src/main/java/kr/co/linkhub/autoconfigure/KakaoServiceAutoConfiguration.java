@@ -40,12 +40,12 @@ public class KakaoServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : kakaoServiceProperties.getLinkId());
         kakaoServiceImp .setSecretKey(kakaoServiceProperties.getSecretKey() == null || kakaoServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : kakaoServiceProperties.getSecretKey());
-        kakaoServiceImp.setTest(kakaoServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : kakaoServiceProperties.isTest());
+        kakaoServiceImp.setTest(kakaoServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : kakaoServiceProperties.getIsTest());
         kakaoServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         kakaoServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         kakaoServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        kakaoServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        kakaoServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         kakaoServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         kakaoServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         kakaoServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

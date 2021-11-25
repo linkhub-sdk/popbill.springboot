@@ -40,12 +40,12 @@ public class EasyFinBankServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : easyFinBankServiceProperties.getLinkId());
         easyFinBankServiceImp .setSecretKey(easyFinBankServiceProperties.getSecretKey() == null || easyFinBankServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : easyFinBankServiceProperties.getSecretKey());
-        easyFinBankServiceImp.setTest(easyFinBankServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : easyFinBankServiceProperties.isTest());
+        easyFinBankServiceImp.setTest(easyFinBankServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : easyFinBankServiceProperties.getIsTest());
         easyFinBankServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         easyFinBankServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         easyFinBankServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        easyFinBankServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        easyFinBankServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         easyFinBankServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         easyFinBankServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         easyFinBankServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());

@@ -40,12 +40,12 @@ public class FaxServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : faxServiceProperties.getLinkId());
         faxServiceImp .setSecretKey(faxServiceProperties.getSecretKey() == null || faxServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : faxServiceProperties.getSecretKey());
-        faxServiceImp.setTest(faxServiceProperties.isTest() == null ? 
-                popbillServiceProperties.isTest() : faxServiceProperties.isTest());
+        faxServiceImp.setTest(faxServiceProperties.getIsTest() == null ? 
+                popbillServiceProperties.getIsTest() : faxServiceProperties.getIsTest());
         faxServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         faxServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
         faxServiceImp.setUseLocalTimeYN(popbillServiceProperties.isUseLocalTimeYn());
-        faxServiceImp.setIPRestrictOnOff(popbillServiceProperties.isIpRestrictOnOff());
+        faxServiceImp.setIPRestrictOnOff(popbillServiceProperties.getIsIpRestrictOnOff());
         faxServiceImp.setAuthURL(popbillServiceProperties.getAuthUrl());
         faxServiceImp.setServiceURL(popbillServiceProperties.getServiceUrl());
         faxServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
