@@ -15,7 +15,7 @@
 
     <name>Popbill API SpringBoot SDK</name>
     <description>POPBiLL API Spring Boot SDK for Java</description>
-    <url>http://www.popbill.com</url>
+    <url>https://www.popbill.com</url>
 
     <licenses>
         <license>
