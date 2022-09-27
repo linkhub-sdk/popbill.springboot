@@ -5,6 +5,7 @@ com.popbill.springboot.autoconfigure.StatementServiceAutoConfiguration,\
 com.popbill.springboot.autoconfigure.HTTaxinvoiceServiceAutoConfiguration,\
 com.popbill.springboot.autoconfigure.HTCashbillServiceAutoConfiguration,\
 com.popbill.springboot.autoconfigure.CloseDownServiceAutoConfiguration,\
+com.popbill.springboot.autoconfigure.BizInfoCheckServiceAutoConfiguration,\
 com.popbill.springboot.autoconfigure.EasyFinBankServiceAutoConfiguration,\
 com.popbill.springboot.autoconfigure.AccountCheckServiceAutoConfiguration,\
 com.popbill.springboot.autoconfigure.MessageServiceAutoConfiguration,\
