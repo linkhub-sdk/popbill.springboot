@@ -18,7 +18,14 @@ public class PopbillServiceProperties {
     
     private String ProxyIP = null;
     private Integer ProxyPort =null;
+    private Map<String, String> customHeader = null;
 
+    public Map<String, String> getCustomHeader() {
+    	return this.customHeader;
+    }
+    public void setCustomHeader(Map<String, String> customHeader) {
+    	this.customHeader = customHeader;
+    }
     public String getLinkId() {
         return this.LinkID;
     }
