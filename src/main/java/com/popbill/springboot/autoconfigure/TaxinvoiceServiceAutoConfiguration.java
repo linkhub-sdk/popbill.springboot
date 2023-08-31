@@ -50,6 +50,7 @@ public class TaxinvoiceServiceAutoConfiguration {
         taxinvoiceServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         taxinvoiceServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         taxinvoiceServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        taxinvoiceServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized TaxinvoiceService");
 

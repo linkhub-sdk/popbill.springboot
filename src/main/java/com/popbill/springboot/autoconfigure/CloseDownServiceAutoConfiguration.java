@@ -50,6 +50,7 @@ public class CloseDownServiceAutoConfiguration {
         closeDownServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         closeDownServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         closeDownServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        closeDownServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
         
         logger.debug("POPBiLL Initialized CloseDownService");
 

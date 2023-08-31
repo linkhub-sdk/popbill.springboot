@@ -50,6 +50,7 @@ public class EasyFinBankServiceAutoConfiguration {
         easyFinBankServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         easyFinBankServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         easyFinBankServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        easyFinBankServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized EasyFinBankService");
 

@@ -50,6 +50,7 @@ public class StatementServiceAutoConfiguration {
         statementServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         statementServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         statementServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        statementServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized StatementService");
 

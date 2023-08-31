@@ -17,7 +17,7 @@ Maven
     <dependency>
         <groupId>kr.co.linkhub</groupId>
         <artifactId>popbill-spring-boot-starter</artifactId>
-        <version>1.10.0</version>
+        <version>1.11.0</version>
     </dependency>
 
 ------------

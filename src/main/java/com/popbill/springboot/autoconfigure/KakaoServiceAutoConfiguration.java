@@ -50,6 +50,7 @@ public class KakaoServiceAutoConfiguration {
         kakaoServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         kakaoServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         kakaoServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        kakaoServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized KakaoService");
 

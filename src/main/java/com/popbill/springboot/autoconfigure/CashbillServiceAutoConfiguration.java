@@ -50,6 +50,7 @@ public class CashbillServiceAutoConfiguration {
         cashbillServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         cashbillServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         cashbillServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        cashbillServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized CashbillService");
 

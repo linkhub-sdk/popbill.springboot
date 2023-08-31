@@ -50,6 +50,7 @@ public class FaxServiceAutoConfiguration {
         faxServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         faxServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         faxServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        faxServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized FaxService");
 

@@ -50,6 +50,7 @@ public class HTTaxinvoiceServiceAutoConfiguration {
         htTaxinvoiceServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         htTaxinvoiceServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         htTaxinvoiceServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        htTaxinvoiceServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized HTTaxinvoiceService");
 

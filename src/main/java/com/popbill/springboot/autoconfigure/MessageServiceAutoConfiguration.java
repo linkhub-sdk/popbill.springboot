@@ -50,6 +50,8 @@ public class MessageServiceAutoConfiguration {
         messageServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         messageServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         messageServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        messageServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        
 
         logger.debug("POPBiLL Initialized MessageService");
 

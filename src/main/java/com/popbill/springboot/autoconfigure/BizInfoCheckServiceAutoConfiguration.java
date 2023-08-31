@@ -50,6 +50,7 @@ public class BizInfoCheckServiceAutoConfiguration {
         bizInfoCheckServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         bizInfoCheckServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         bizInfoCheckServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        bizInfoCheckServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized BizInfoCheckService");
         

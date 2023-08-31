@@ -50,6 +50,7 @@ public class HTCashbillServiceAutoConfiguration {
         htCashbillServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         htCashbillServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         htCashbillServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        htCashbillServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized HTCashbillService");
 

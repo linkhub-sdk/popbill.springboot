@@ -50,6 +50,7 @@ public class AccountCheckServiceAutoConfiguration {
         accountCheckServiceImp.setTestServiceURL(popbillServiceProperties.getTestServiceUrl());
         accountCheckServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         accountCheckServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
+        accountCheckServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
 
         logger.debug("POPBiLL Initialized AccountCheckService");
         
