@@ -34,12 +34,12 @@ public class KakaoServiceAutoConfiguration {
     public KakaoService kakaoServiceConfig() {
 
         KakaoServiceImp kakaoServiceImp = new KakaoServiceImp();
-        
+
         kakaoServiceImp.setLinkID(kakaoServiceProperties.getLinkId() == null || kakaoServiceProperties.getLinkId().trim().isEmpty() ?
                 popbillServiceProperties.getLinkId() : kakaoServiceProperties.getLinkId());
         kakaoServiceImp .setSecretKey(kakaoServiceProperties.getSecretKey() == null || kakaoServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : kakaoServiceProperties.getSecretKey());
-        kakaoServiceImp.setTest(kakaoServiceProperties.getIsTest() == null ? 
+        kakaoServiceImp.setTest(kakaoServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : kakaoServiceProperties.getIsTest());
         kakaoServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         kakaoServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,6 +51,9 @@ public class KakaoServiceAutoConfiguration {
         kakaoServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         kakaoServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         kakaoServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        kakaoServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        kakaoServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        kakaoServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized KakaoService");
 

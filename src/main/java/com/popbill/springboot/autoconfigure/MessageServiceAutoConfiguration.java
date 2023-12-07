@@ -39,7 +39,7 @@ public class MessageServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : messageServiceProperties.getLinkId());
         messageServiceImp .setSecretKey(messageServiceProperties.getSecretKey() == null || messageServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : messageServiceProperties.getSecretKey());
-        messageServiceImp.setTest(messageServiceProperties.getIsTest() == null ? 
+        messageServiceImp.setTest(messageServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : messageServiceProperties.getIsTest());
         messageServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         messageServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,7 +51,10 @@ public class MessageServiceAutoConfiguration {
         messageServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         messageServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         messageServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
-        
+        messageServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        messageServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        messageServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
+
 
         logger.debug("POPBiLL Initialized MessageService");
 

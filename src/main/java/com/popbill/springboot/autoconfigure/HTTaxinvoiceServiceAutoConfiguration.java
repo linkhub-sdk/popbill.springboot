@@ -39,7 +39,7 @@ public class HTTaxinvoiceServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : htTaxinvoiceServiceProperties.getLinkId());
         htTaxinvoiceServiceImp .setSecretKey(htTaxinvoiceServiceProperties.getSecretKey() == null || htTaxinvoiceServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : htTaxinvoiceServiceProperties.getSecretKey());
-        htTaxinvoiceServiceImp.setTest(htTaxinvoiceServiceProperties.getIsTest() == null ? 
+        htTaxinvoiceServiceImp.setTest(htTaxinvoiceServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : htTaxinvoiceServiceProperties.getIsTest());
         htTaxinvoiceServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         htTaxinvoiceServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,6 +51,9 @@ public class HTTaxinvoiceServiceAutoConfiguration {
         htTaxinvoiceServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         htTaxinvoiceServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         htTaxinvoiceServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        htTaxinvoiceServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        htTaxinvoiceServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        htTaxinvoiceServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized HTTaxinvoiceService");
 

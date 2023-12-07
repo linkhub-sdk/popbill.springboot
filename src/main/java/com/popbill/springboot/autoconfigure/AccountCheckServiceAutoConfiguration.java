@@ -39,7 +39,7 @@ public class AccountCheckServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : accountCheckServiceProperties.getLinkId());
         accountCheckServiceImp .setSecretKey(accountCheckServiceProperties.getSecretKey() == null || accountCheckServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : accountCheckServiceProperties.getSecretKey());
-        accountCheckServiceImp.setTest(accountCheckServiceProperties.getIsTest() == null ? 
+        accountCheckServiceImp.setTest(accountCheckServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : accountCheckServiceProperties.getIsTest());
         accountCheckServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         accountCheckServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,9 +51,12 @@ public class AccountCheckServiceAutoConfiguration {
         accountCheckServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         accountCheckServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         accountCheckServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        accountCheckServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        accountCheckServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        accountCheckServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized AccountCheckService");
-        
+
         return accountCheckServiceImp;
     }
 }

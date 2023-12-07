@@ -39,7 +39,7 @@ public class EasyFinBankServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : easyFinBankServiceProperties.getLinkId());
         easyFinBankServiceImp .setSecretKey(easyFinBankServiceProperties.getSecretKey() == null || easyFinBankServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : easyFinBankServiceProperties.getSecretKey());
-        easyFinBankServiceImp.setTest(easyFinBankServiceProperties.getIsTest() == null ? 
+        easyFinBankServiceImp.setTest(easyFinBankServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : easyFinBankServiceProperties.getIsTest());
         easyFinBankServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         easyFinBankServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,6 +51,9 @@ public class EasyFinBankServiceAutoConfiguration {
         easyFinBankServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         easyFinBankServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         easyFinBankServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        easyFinBankServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        easyFinBankServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        easyFinBankServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized EasyFinBankService");
 

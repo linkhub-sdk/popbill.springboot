@@ -39,7 +39,7 @@ public class BizInfoCheckServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : bizInfoCheckServiceProperties.getLinkId());
         bizInfoCheckServiceImp .setSecretKey(bizInfoCheckServiceProperties.getSecretKey() == null || bizInfoCheckServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : bizInfoCheckServiceProperties.getSecretKey());
-        bizInfoCheckServiceImp.setTest(bizInfoCheckServiceProperties.getIsTest() == null ? 
+        bizInfoCheckServiceImp.setTest(bizInfoCheckServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : bizInfoCheckServiceProperties.getIsTest());
         bizInfoCheckServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         bizInfoCheckServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,9 +51,12 @@ public class BizInfoCheckServiceAutoConfiguration {
         bizInfoCheckServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         bizInfoCheckServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         bizInfoCheckServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        bizInfoCheckServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        bizInfoCheckServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        bizInfoCheckServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized BizInfoCheckService");
-        
+
         return bizInfoCheckServiceImp;
     }
 }

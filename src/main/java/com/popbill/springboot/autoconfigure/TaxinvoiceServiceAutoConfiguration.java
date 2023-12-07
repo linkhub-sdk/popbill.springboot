@@ -24,7 +24,7 @@ public class TaxinvoiceServiceAutoConfiguration {
 
     @Autowired
     private PopbillServiceProperties popbillServiceProperties;
-    
+
     @Autowired
     private TaxinvoiceServiceProperties taxinvoiceServiceProperties;
 
@@ -32,14 +32,14 @@ public class TaxinvoiceServiceAutoConfiguration {
     @Bean(name = "TaxinvoiceService")
     @ConditionalOnMissingBean
     public TaxinvoiceService taxinvoiceServiceConfig() {
-        
+
         TaxinvoiceServiceImp taxinvoiceServiceImp = new TaxinvoiceServiceImp();
 
         taxinvoiceServiceImp.setLinkID(taxinvoiceServiceProperties.getLinkId() == null || taxinvoiceServiceProperties.getLinkId().trim().isEmpty() ?
                 popbillServiceProperties.getLinkId() : taxinvoiceServiceProperties.getLinkId());
         taxinvoiceServiceImp .setSecretKey(taxinvoiceServiceProperties.getSecretKey() == null || taxinvoiceServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : taxinvoiceServiceProperties.getSecretKey());
-        taxinvoiceServiceImp.setTest(taxinvoiceServiceProperties.getIsTest() == null ? 
+        taxinvoiceServiceImp.setTest(taxinvoiceServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : taxinvoiceServiceProperties.getIsTest());
         taxinvoiceServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         taxinvoiceServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,6 +51,9 @@ public class TaxinvoiceServiceAutoConfiguration {
         taxinvoiceServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         taxinvoiceServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         taxinvoiceServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        taxinvoiceServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        taxinvoiceServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        taxinvoiceServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized TaxinvoiceService");
 

@@ -39,7 +39,7 @@ public class CashbillServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : cashbillServiceProperties.getLinkId());
         cashbillServiceImp .setSecretKey(cashbillServiceProperties.getSecretKey() == null || cashbillServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : cashbillServiceProperties.getSecretKey());
-        cashbillServiceImp.setTest(cashbillServiceProperties.getIsTest() == null ? 
+        cashbillServiceImp.setTest(cashbillServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : cashbillServiceProperties.getIsTest());
         cashbillServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         cashbillServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,6 +51,9 @@ public class CashbillServiceAutoConfiguration {
         cashbillServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         cashbillServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         cashbillServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        cashbillServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        cashbillServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        cashbillServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized CashbillService");
 

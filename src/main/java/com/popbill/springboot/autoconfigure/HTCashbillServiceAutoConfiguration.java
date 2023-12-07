@@ -39,7 +39,7 @@ public class HTCashbillServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : htCashbillServiceProperties.getLinkId());
         htCashbillServiceImp .setSecretKey(htCashbillServiceProperties.getSecretKey() == null || htCashbillServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : htCashbillServiceProperties.getSecretKey());
-        htCashbillServiceImp.setTest(htCashbillServiceProperties.getIsTest() == null ? 
+        htCashbillServiceImp.setTest(htCashbillServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : htCashbillServiceProperties.getIsTest());
         htCashbillServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         htCashbillServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,6 +51,9 @@ public class HTCashbillServiceAutoConfiguration {
         htCashbillServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         htCashbillServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         htCashbillServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        htCashbillServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        htCashbillServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        htCashbillServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized HTCashbillService");
 

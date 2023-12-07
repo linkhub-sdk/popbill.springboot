@@ -39,7 +39,7 @@ public class FaxServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : faxServiceProperties.getLinkId());
         faxServiceImp .setSecretKey(faxServiceProperties.getSecretKey() == null || faxServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : faxServiceProperties.getSecretKey());
-        faxServiceImp.setTest(faxServiceProperties.getIsTest() == null ? 
+        faxServiceImp.setTest(faxServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : faxServiceProperties.getIsTest());
         faxServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         faxServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,6 +51,9 @@ public class FaxServiceAutoConfiguration {
         faxServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         faxServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         faxServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        faxServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        faxServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        faxServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized FaxService");
 

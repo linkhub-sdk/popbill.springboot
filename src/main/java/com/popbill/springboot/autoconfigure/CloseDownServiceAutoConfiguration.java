@@ -39,7 +39,7 @@ public class CloseDownServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : closeDownServiceProperties.getLinkId());
         closeDownServiceImp .setSecretKey(closeDownServiceProperties.getSecretKey() == null || closeDownServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : closeDownServiceProperties.getSecretKey());
-        closeDownServiceImp.setTest(closeDownServiceProperties.getIsTest() == null ? 
+        closeDownServiceImp.setTest(closeDownServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : closeDownServiceProperties.getIsTest());
         closeDownServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         closeDownServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,7 +51,10 @@ public class CloseDownServiceAutoConfiguration {
         closeDownServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         closeDownServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         closeDownServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
-        
+        closeDownServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        closeDownServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        closeDownServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
+
         logger.debug("POPBiLL Initialized CloseDownService");
 
         return closeDownServiceImp;

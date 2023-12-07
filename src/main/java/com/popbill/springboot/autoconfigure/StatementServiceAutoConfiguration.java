@@ -39,7 +39,7 @@ public class StatementServiceAutoConfiguration {
                 popbillServiceProperties.getLinkId() : statementServiceProperties.getLinkId());
         statementServiceImp .setSecretKey(statementServiceProperties.getSecretKey() == null || statementServiceProperties.getSecretKey().trim().isEmpty() ?
                 popbillServiceProperties.getSecretKey() : statementServiceProperties.getSecretKey());
-        statementServiceImp.setTest(statementServiceProperties.getIsTest() == null ? 
+        statementServiceImp.setTest(statementServiceProperties.getIsTest() == null ?
                 popbillServiceProperties.getIsTest() : statementServiceProperties.getIsTest());
         statementServiceImp.setUseStaticIP(popbillServiceProperties.isUseStaticIp());
         statementServiceImp.setUseGAIP(popbillServiceProperties.isUseGaIp());
@@ -51,6 +51,9 @@ public class StatementServiceAutoConfiguration {
         statementServiceImp.setProxyIP(popbillServiceProperties.getProxyIp());
         statementServiceImp.setProxyPort(popbillServiceProperties.getProxyPort());
         statementServiceImp.setCustomHeader(popbillServiceProperties.getCustomHeader());
+        statementServiceImp.setMleKeyID(popbillServiceProperties.getMleKeyID());
+        statementServiceImp.setMleKeyName(popbillServiceProperties.getMleKeyName());
+        statementServiceImp.setMlePublicKey(popbillServiceProperties.getMlePublicKey());
 
         logger.debug("POPBiLL Initialized StatementService");
 
