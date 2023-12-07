@@ -13,14 +13,17 @@ public class PopbillServiceProperties {
     private Boolean useGAIP = false;
     private Boolean useLocalTimeYN = true;
     private Boolean isIPRestrictOnOff = true;
-    
+
     private String AuthURL = null;
     private String ServiceURL = null;
     private String TestServiceURL = null;
-    
+
     private String ProxyIP = null;
     private Integer ProxyPort =null;
     private Map<String, String> customHeader = null;
+    private String mleKeyID;
+    private String mleKeyName;
+    private String mlePublicKey;
 
     public Map<String, String> getCustomHeader() {
     	return this.customHeader;
@@ -111,4 +114,31 @@ public class PopbillServiceProperties {
     public void setProxyPort(Integer proxyPort) {
         this.ProxyPort = proxyPort;
     }
+
+    public void setMleKeyID(String mleKeyID) {
+  		this.mleKeyID = mleKeyID;
+  	}
+
+  	public void setMleKeyName(String mleKeyName) {
+  		this.mleKeyName = mleKeyName;
+  	}
+
+  	public void setMlePublicKey(String mlePublicKey) {
+  		this.mlePublicKey = mlePublicKey;
+  	}
+
+  	public String getMleKeyID() {
+  		return mleKeyID;
+  	}
+
+  	public String getMleKeyName() {
+  		return mleKeyName;
+  	}
+
+  	public String getMlePublicKey() {
+  		return mlePublicKey;
+  	}
+
+
+
 }
