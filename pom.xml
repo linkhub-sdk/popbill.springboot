@@ -10,7 +10,7 @@
     </parent>
     <groupId>kr.co.linkhub</groupId>
     <artifactId>popbill-spring-boot-starter</artifactId>
-    <version>1.15.0</version>
+    <version>1.15.1</version>
     <packaging>jar</packaging>
 
     <name>Popbill API SpringBoot SDK</name>
