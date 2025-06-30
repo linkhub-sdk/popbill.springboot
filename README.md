@@ -8,7 +8,7 @@ popbill.springboot.sdk.java
 Gradle
 ================
     dependencies {
-        implementation 'kr.co.linkhub:popbill-spring-boot-starter:1.16.0'
+        implementation 'kr.co.linkhub:popbill-spring-boot-starter:1.17.0'
     }
 
 ------------
@@ -17,7 +17,7 @@ Maven
     <dependency>
         <groupId>kr.co.linkhub</groupId>
         <artifactId>popbill-spring-boot-starter</artifactId>
-        <version>1.16.0</version>
+        <version>1.17.0</version>
     </dependency>
 
 ------------
